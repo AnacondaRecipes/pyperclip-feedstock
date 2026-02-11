@@ -11,27 +11,20 @@ source:
   sha256: 244035963e4428530d9e3a6101a1ef97209c6825edab1567beac148ccc1db1b6
 
 build:
-  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - pip
     - setuptools
   run:
-    - python >={{ python_min }}
-    - __linux  # [linux]
-    - __osx  # [osx]
-    - __win  # [win]
-    - xclip  # [linux]
-    - xsel  # [linux]
-    - pyobjc-framework-cocoa  # [osx]
+    - python
 
 test:
   requires:
-    - python {{ python_min }}
+    - python
   imports:
     - pyperclip
 
