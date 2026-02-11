@@ -34,6 +34,8 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   summary: A cross-platform clipboard module for Python. (only handles plain text for now)
+  description: |
+    Pyperclip is a cross-platform Python module for copy and paste clipboard functions.
   dev_url: https://github.com/asweigart/pyperclip
   doc_url: https://pyperclip.readthedocs.io
 
