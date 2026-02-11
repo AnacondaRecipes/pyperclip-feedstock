@@ -24,7 +24,9 @@ requirements:
 
 test:
   requires:
-    - python
+    - pip
+  commands:
+    - pip check
   imports:
     - pyperclip
 
