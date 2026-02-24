@@ -25,11 +25,13 @@ requirements:
     - xclip  # [linux]
 
 test:
+  files:
+    - test.py
   requires:
     - pip
   commands:
     - pip check
-    - python -c "import pyperclip as ppc; ppc.copy('Test'); assert ppc.paste() == 'Test'"
+    - python test.py
   imports:
     - pyperclip
 
