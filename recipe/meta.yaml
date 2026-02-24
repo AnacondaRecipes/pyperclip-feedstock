@@ -29,6 +29,7 @@ test:
     - pip
   commands:
     - pip check
+    - python -c "import pyperclip as ppc; ppc.copy('Test'); assert ppc.paste() == 'Test'"
   imports:
     - pyperclip
 
