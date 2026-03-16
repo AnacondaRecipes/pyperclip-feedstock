@@ -31,7 +31,7 @@ test:
   commands:
     - pip check
     - Xvfb :99 -screen 0 800x600x24 -nolisten tcp -noreset -fp built-ins & XVFB_PID=$! && sleep 2 && DISPLAY=:99 python -c "import pyperclip as ppc; ppc.copy('Test'); assert ppc.paste() == 'Test'" && kill $XVFB_PID  # [linux]
-    - python -c "import pyperclip as ppc; ppc.copy('Test'); assert ppc.paste() == 'Test'" && kill $XVFB_PID  # [win]
+    - python -c "import pyperclip as ppc; ppc.copy('Test'); assert ppc.paste() == 'Test'" # [win]
   imports:
     - pyperclip
 
